@@ -15,7 +15,7 @@ let weather = {
     fetchWeather: async function(city){
         API_KEY: '022de2de5c864072882191158232508'
         try{
-            const response = await fetch('http://api.weatherapi.com/v1/current.json?key=022de2de5c864072882191158232508&q=' + city + '&aqi=no')
+            const response = await fetch('https://api.weatherapi.com/v1/current.json?key=022de2de5c864072882191158232508&q=' + city + '&aqi=no')
             const data = await response.json();
             this.displayData(data)
         }catch(error){
